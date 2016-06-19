@@ -1,0 +1,5 @@
+SELECT sso.SpecialOfferID, Description, DiscountPct, ProductID
+FROM Sales.SpecialOfferProduct ssop
+RIGHT OUTER JOIN Sales.SpecialOffer sso
+ ON ssop.SpecialOfferID = sso.SpecialOfferID 
+WHERE sso.SpecialOfferID != 1
