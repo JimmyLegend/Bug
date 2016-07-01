@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
+
 	private GridView gridView;
 	private int[] icon={
 			R.drawable.yygl,
@@ -20,23 +21,23 @@ public class MainActivity extends Activity {
 			R.drawable.jcgl,
 			R.drawable.sjjs,
 			R.drawable.sjbf,
-			R.drawable.ysbh,
+			R.drawable.ysbh
 	};
-	private String[] iconName = { "应用管理", "骚扰拦截", "进程管理", "手机加速", "手机备分",
-	"隐私保护" };
 
-
+	//要显示的文字
+	private String[] iconName = { "应用管理", "骚扰拦截", "进程管理", "手机加速", "手机本分",
+			"隐私保护" };
+	    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-gridView=(GridView) findViewById(R.id.gridView);
+        //在家在布局文件之后获取布局文件中的控件
+        gridView=(GridView) findViewById(R.id.gridView);
         
         GridAdapter adapter=new GridAdapter();
         gridView.setAdapter(adapter);
-
     }
-    
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -77,10 +78,8 @@ gridView=(GridView) findViewById(R.id.gridView);
     		return position;
     	}
 
- 
-
-		@Override
-		public View getView(int arg0, View arg1, ViewGroup arg2) {
+    	@Override
+    	public View getView(int arg0, View arg1, ViewGroup arg2) {
     		// TODO Auto-generated method stub
     		View view=View.inflate(MainActivity.this,R.layout.item_gridview,null);
     		//获取布局文件中的，图片和文本对象。
@@ -92,6 +91,5 @@ gridView=(GridView) findViewById(R.id.gridView);
     		
     		return view;
     	}}
-
 
 }

@@ -9,14 +9,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class WelcomeActivity extends Activity {
-
-	Handler mhandler=new Handler(){@Override
-	public void handleMessage(Message msg) {
-		// TODO Auto-generated method stub
-		Intent intent=new Intent(WelcomeActivity.this,MainActivity.class);
-		startActivity(intent);
-		WelcomeActivity.this.finish();
-	}};
+	Handler mHandler=new Handler() {
+		
+		@Override
+		public void handleMessage(Message msg) {
+			// TODO Auto-generated method stub
+			Intent intent=new Intent(WelcomeActivity.this,MainActivity.class);
+			startActivity(intent);
+			WelcomeActivity.this.finish();
+		}
+	};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,7 +35,7 @@ public class WelcomeActivity extends Activity {
 					e.printStackTrace();
 				}
 				Message msg=new Message();
-				mhandler.sendMessage(msg);
+				mHandler.sendMessage(msg);
 			}
 		}).start();
 	}
