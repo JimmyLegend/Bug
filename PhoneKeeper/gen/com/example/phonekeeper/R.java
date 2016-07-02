@@ -32,19 +32,24 @@ public final class R {
         public static final int yygl=0x7f020007;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000c;
+        public static final int action_settings=0x7f080011;
         public static final int btn_addblack=0x7f080003;
-        public static final int et_blacknum=0x7f08000b;
-        public static final int gridView=0x7f080005;
-        public static final int imageView=0x7f08000a;
-        public static final int iv_appicon=0x7f080006;
+        public static final int btn_blacklist=0x7f080005;
+        public static final int et_blacknum=0x7f080010;
+        public static final int gridView=0x7f080007;
+        public static final int imageView=0x7f08000c;
+        public static final int iv_appicon=0x7f080008;
         public static final int lv_app=0x7f080001;
         public static final int lv_blacklist=0x7f080002;
-        public static final int textView=0x7f080004;
+        public static final int lv_smsfilter=0x7f080004;
+        public static final int textView=0x7f080006;
         public static final int textView1=0x7f080000;
-        public static final int tv_appname=0x7f080007;
-        public static final int tv_blacknum=0x7f080009;
-        public static final int tv_sys=0x7f080008;
+        public static final int tv_appname=0x7f080009;
+        public static final int tv_blacknum=0x7f08000b;
+        public static final int tv_context=0x7f08000f;
+        public static final int tv_num=0x7f08000d;
+        public static final int tv_sys=0x7f08000a;
+        public static final int tv_time=0x7f08000e;
     }
     public static final class layout {
         public static final int activity_app_manage=0x7f030000;
@@ -59,7 +64,8 @@ public final class R {
         public static final int item_applist=0x7f030009;
         public static final int item_blacknum=0x7f03000a;
         public static final int item_gridview=0x7f03000b;
-        public static final int view_blacknum=0x7f03000c;
+        public static final int item_smsfilter=0x7f03000c;
+        public static final int view_blacknum=0x7f03000d;
     }
     public static final class menu {
         public static final int app_manage=0x7f070000;

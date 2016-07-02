@@ -23,4 +23,18 @@
 
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/lv_smsfilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btn_blacklist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="黑名单" />
+
 </LinearLayout>

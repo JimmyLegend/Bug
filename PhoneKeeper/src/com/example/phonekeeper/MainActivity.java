@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
 	};
 
 	//要显示的文字
-	private String[] iconName = { "应用管理", "骚扰拦截", "进程管理", "手机加速", "手机本分",
+	private String[] iconName = { "应用管理", "骚扰拦截", "进程管理", "手机加速", "手机备分",
 			"隐私保护" };
 	    
     @Override
