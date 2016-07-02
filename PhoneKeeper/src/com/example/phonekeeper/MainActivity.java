@@ -1,11 +1,14 @@
 package com.example.phonekeeper;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -37,6 +40,58 @@ public class MainActivity extends Activity {
         
         GridAdapter adapter=new GridAdapter();
         gridView.setAdapter(adapter);
+        //为GridView添加子项点击事件
+        gridView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+				//相应指向点击事件
+				//通过arg2参数确定用户点击的是哪一个子项
+				switch (arg2) {
+				case 0://应用管理
+				{
+					Intent intent=new Intent(MainActivity.this,AppManageActivity.class);
+					startActivity(intent);
+					break;
+				}
+                case 1://骚扰拦截
+                {	
+                	Intent intent=new Intent(MainActivity.this,FilterActivity.class);
+					startActivity(intent);
+					break;
+                }
+                case 2://进程管理
+                {
+                	Intent intent=new Intent(MainActivity.this,ProcessManageActivity.class);
+					startActivity(intent);
+	                break;
+                }
+                case 3://手机加速
+                {
+                	Intent intent=new Intent(MainActivity.this,SpeedActivity.class);
+					startActivity(intent);
+	                break;
+                }
+                case 4://手机备份
+                {
+                	Intent intent=new Intent(MainActivity.this,BackupActivity.class);
+					startActivity(intent);
+	                break;
+                }
+                case 5://隐私保护
+                {
+                	Intent intent=new Intent(MainActivity.this,SecretActivity.class);
+					startActivity(intent);
+	                break;
+                }
+				default:
+					break;
+				}
+			}
+        	
+		});
     }
 
     @Override
