@@ -23,4 +23,13 @@
 
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/lv_process"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+         >
+    </ListView>
+
 </LinearLayout>
